@@ -1,5 +1,9 @@
-import { getConnection } from "./../database/database";
+import getConnection from "./../database/database.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+
+// const { getConnection } = require("./../database/database.js");
+// const db = require("./../database/database");
 
 const createUser = async (req, res) => {
     try {
@@ -47,7 +51,6 @@ const login = async (req, res) => {
             return res.status(400).json({error: "Password not valid"});
         }
 
-        const jwt = require("jsonwebtoken");
         const accessToken = jwt.sign({
             name: userLookupResult[0].email,
             id: userLookupResult[0].id

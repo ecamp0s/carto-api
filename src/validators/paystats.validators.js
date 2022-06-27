@@ -1,6 +1,9 @@
-const Joi = require("joi");
-const joiPostalCode = Joi.extend(require("joi-postalcode"));
-const validator = require("express-joi-validation").createValidator({});
+import Joi from "joi";
+import joiPc from "joi-postalcode";
+import ejv from "express-joi-validation";
+
+const joiPostalCode = Joi.extend(joiPc);
+const validator = ejv.createValidator({});
 
 const querySchema = Joi.object({
     from: Joi.date().iso(),

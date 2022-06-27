@@ -1,15 +1,15 @@
 import express from "express";
 import morgan from "morgan";
-import verifyToken from "./helpers/validate-token";
+import verifyToken from "./helpers/validate-token.js";
 // Imports for Routes
-import authRoutes from "./routes/auth.routes";
-import paystatsRoutes from "./routes/paystats.routes";
-import postalCodesRoutes from "./routes/postal_codes.routes";
+import authRoutes from "./routes/auth.routes.js";
+import paystatsRoutes from "./routes/paystats.routes.js";
+import postalCodesRoutes from "./routes/postal_codes.routes.js";
 
 const app = express();
 
 // Settings
-app.set("port", process.env.APP_PORT);
+app.set("port", process.env.PORT || process.env.APP_PORT);
 
 // Middlewares
 app.use(morgan("dev"));

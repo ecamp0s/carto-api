@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { methods as paystatsController } from "../controllers/paystats.controllers";
-import { methods as paystatsValidators } from "../validators/paystats.validators";
+import { methods as paystatsController } from "../controllers/paystats.controllers.js";
+import { methods as paystatsValidators } from "../validators/paystats.validators.js";
 
 const router  = Router();
 

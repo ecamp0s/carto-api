@@ -1,6 +1,7 @@
 import Joi from "joi";
+import ejv from "express-joi-validation";
 
-const validator = require("express-joi-validation").createValidator({});
+const validator = ejv.createValidator({});
 
 const userSchema = Joi.object({
     email: Joi.string().min(6).max(90).required().email(),

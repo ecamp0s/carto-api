@@ -1,4 +1,4 @@
-import { getConnection } from "./../database/database";
+import getConnection from "./../database/database.js";
 
 const getTotalTurnover = async (req, res) => {
     try {

@@ -1,4 +1,4 @@
-import { getConnection } from "./../database/database";
+import getConnection from "./../database/database.js";
 import wkx from "wkx";
 
 const getGeometries = async (req, res) => {

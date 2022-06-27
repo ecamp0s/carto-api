@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { methods as postalCodesController } from "../controllers/postal_codes.controllers";
+import { methods as postalCodesController } from "../controllers/postal_codes.controllers.js";
 
 const router  = Router();
 
