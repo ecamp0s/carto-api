@@ -19,7 +19,7 @@ To run the application in development mode:
 
 ### Configure Postman
 
-Open your Postman application and import the two files from the "postman" folder.  
+Open your Postman application and import the two files from the "postman" folderrr.  
 The "collection.json" file contains all the endpoints included in this API.  
 The "environment.json" file contains the environment variables necessary for Postman to work properly.  
 This API works through port 4000 with the URL: <http://localhost:4000/>. After this file is imported, we can modify its values directly from Postman (Environments:Local).
