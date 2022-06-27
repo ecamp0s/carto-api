@@ -73,3 +73,22 @@ These endpoints allow to obtain: the total turnover (/api/paystats/totalTurnover
 - **GET** /api/paystats/totalTurnover | period (YYYY-MM-DD)
 - **GET** /api/paystats/turnoverByGender | period (YYYY-MM-DD), postal_code
 - **GET** /api/paystats/monthlyTurnoverByGender | period (YYYY-MM-DD)
+
+## Development notes
+
+This API serves the necessary data for the wireframe in question. It is built with Node.js, and uses the following packages:  
+
+- Express, a web application framework for Node.js.
+- Morgan, a middleware to log HTTP requests and errors.
+- Bcrypt, for salt and hashing passwords.
+- Joi, to validate the parameters received in each request.
+- Json Web Token, to facilitate the validation and generation of tokens.
+- Promise MySQL, to connect to the MySQL DB.
+- WKX, to convert the WKB Geometry into coordinates.  
+
+The structure of the application allows you to easily add more endpoints, since the routes are separated from the controllers and the validation rules.
+
+## Other notes
+
+The time series plot is not entirely clear. I am left with the doubt about the value that defines each point on the line.  
+The '/api/paystats/monthlyTurnoverByGender' endpoint attempts to provide the data needed to draw that chart.
