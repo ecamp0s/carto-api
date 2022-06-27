@@ -9,8 +9,8 @@
     "dev": "nodemon --exec npm run babel-node src/index.js",
     "start": "node src/index"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["carto"],
+  "author": "Emilio Campos",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -31,5 +31,8 @@
     "@babel/node": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": "16.15.1"
   }
 }
